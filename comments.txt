@@ -1,0 +1,71 @@
+// comment
+// the command i used was:
+// grep "^//" problem* > comments.txt
+problem1.swift://Problem 1 
+problem1.swift:// assume input is valid Double
+problem1.swift://some test cases
+problem1.swift://print(fahToCel(100))
+problem1.swift://print(fahToCel(0))
+problem2.swift:// Problem 2
+problem2.swift:// Prompt user to enter a score
+problem2.swift:// then call function with what user entered as input
+problem2.swift:// Convert input to Double just in case
+problem2.swift:// Do a big if else statement
+problem3.swift://Problem 3
+problem3.swift:// use recursion
+problem3.swift:// Base case: 1 is a power of everything since a^0 = 1
+problem3.swift:// Recursive case: check a is divisible by b and then reduce to problem to smaller and smaller cases until either a is no longer divisible by b or a is equal to 1
+problem3.swift:// test cases
+problem3.swift://isPower(10,2)
+problem3.swift://isPower(8,2)
+problem3.swift://isPower(1024,8)
+problem3.swift://isPower(97,3)
+problem4.swift://Problem 4
+problem4.swift:// the base case as given in the problem instructions is if b is 0 then return a
+problem4.swift:// we will use recursion, and everytime both a and b will become smaller, until b is 0 at some point
+problem4.swift:// we will ultimately reach the base case
+problem4.swift:// this is basically Euclid's algorithm
+problem4.swift:// some test cases
+problem4.swift://gcd(100,25)
+problem4.swift://gcd(100,7)
+problem5.swift:// Problem 5
+problem5.swift:// Prompt user for an input
+problem5.swift:// return false if the string is less than 12 characters
+problem5.swift:// since we need one of each category: lower case, upper case, numbers, and special characters
+problem5.swift:// we make sure that each category has at least length 1 after filtering the String
+problem5.swift:// if all criteria are met, then return true, else false
+problem5.swift:// the user of filter is referenced from and inspired by the following source:
+problem5.swift:// https://stackoverflow.com/questions/36594179/remove-all-non-numeric-characters-from-a-string-in-swift
+problem5.swift://some test cases
+problem5.swift://print(isValidPassword("mom"))
+problem5.swift://print(isValidPassword("never!_o12dd_oAr_even"))
+problem5.swift://print(isValidPassword(""))
+problem5.swift://print(isValidPassword("caA3@r"))
+problem6.swift://Problem 6
+problem6.swift:// we are going to solve this using recursion
+problem6.swift:// Base case: 
+problem6.swift:// if the absolute value of the number is smaller than 11 and not 0, then its not divisible
+problem6.swift:// if the absolute value of the number is 0, then it is divisible
+problem6.swift:// Recursive case: 
+problem6.swift:// we use the alt sum technique to reduce a big number into a much smaller number
+problem6.swift:// and then we can call divBy11 again on that much smaller alt sum number
+problem6.swift:// until that number has absolute value smaller than 11
+problem6.swift://some test cases
+problem6.swift://print(divBy11(121))
+problem6.swift://print(divBy11(1331))
+problem6.swift://print(divBy11(99))
+problem6.swift://print(divBy11(1010109))
+problem7.swift:// Problem 7
+problem7.swift:// first of all turn everything to lowercase (since in example given upper vs lower makes no difference)
+problem7.swift:// in example given, punctuation and non alphbetic characters made no difference
+problem7.swift:// so we only keep the alphabets
+problem7.swift:// then we check to see if the processed text is the same as its reverse
+problem7.swift://print(isPalindrome("mom"))
+problem7.swift://print(isPalindrome("never_odd_or_even"))
+problem7.swift://print(isPalindrome(""))
+problem7.swift://print(isPalindrome("car"))
+problem8.swift:// Problem 8
+problem8.swift:// we first notice that every row has the same width
+problem8.swift:// we then notice that the number of stars in each row is rowNumber*2-1
+problem8.swift:// we then just figure out how to pad the stars with spaces on both sides
+problem8.swift:// and use  for loop to print
