@@ -1,0 +1,127 @@
+
+Assignment 2 Grade: edrictam
+
+Please see comments for formatting issues. Semicolons are hot lava, avoid them!
+
+Problem 1 5/6
+1/1 takes fahrenheit as a parameter
+0/1 checks for and handles invalid input
+3/3 correctly/efficiently converts temp
+1/1 prints or returns celsius
+
+Problem 2 5/6 (-0.5 formatting)
+1/1 takes integer 0-100 as a parameter
+0.5/1 checks for out of range and prints error message
+3/3 correctly/efficiently matches score to grade
+1/1 prints or returns grade
+
+Problem 3 7.5/8 (-0.5 formatting)
+1/1 takes a and b as parameters
+2/2 checks if a is divisible by b
+2/2 checks if a/b is a power of b
+2/2 determines if a is a power of b
+1/1 returns boolean
+
+Problem 4 7.5/8 (-0.5 formatting)
+1/1 takes a and b as parameters
+2/2 handles base case gcd(a, 0) = a
+2/2 calculates remainder r when a is divided by b
+1/1 stops when r = 0
+1/1 determines GCD
+1/1 returns GCD
+
+Problem 5 8/8
+1/1 takes password as parameter
+1/1 checks for 12 characters
+1/1 checks for both letters and numbers
+1/1 checks for one of !, @, #, $, %
+1/1 checks for uppercase letter
+1/1 checks for lowercase letter
+1/1 calculates whether password is strong
+1/1 returns boolean or message
+
+/**
+  Many ways to solve problems 6, 7, and 8, hence the vague requirements.
+  See comments for clarification if points were taken off.
+ */
+
+Problem 6 7.5/8 (-0.5 formatting)
+1/1 takes number as parameter
+5/5 correctly/efficiently determines if number is divisible by 11
+1/1 does not use remainder operator %
+1/1 returns boolean or message
+
+Problem 7 8/8
+1/1 takes sequence as parameter
+6/6 correctly/efficiently determines if it is a palindrome
+1/1 returns boolean or message
+
+Problem 8 8/8
+1/1 takes int as parameter
+5/5 correctly/efficiently forms pyramid shape with input's height
+1/1 does not use recursion
+1/1 prints triangle
+
+Total 56.5/60
+
+2. Check out switch statements in Swift. The way you found the letter grades is fine, not 
+worthy of losing points, but a switch statement would be cleaner and more "Swifty" here.
+
+Formatting, formatting, formatting. You've got inconsistent whitespace within your
+operation declarations (that's where the -0.5 comes from in the 2.5/3)
+	if (num >= 90) {
+        	return "A";
+    	} else if (num>=80) {
+        	return "B";
+    	}
+Where num >= 90 is the correct formatting. Also, parentheses are not required in Swift
+if/else/for/while/return etc statements, nor should semicolons exist. Should be:
+	if num >= 90 {
+        	return "A"
+    	} else if num >= 80 {
+        	return "B"
+    	}
+
+Your error handling is almost correct. Here's the fully correct way:
+	if num > 100 || num < 0 {
+		// return error message
+	}
+Where you're handling both ends of your out of range issues instead of handling > 100
+first, then < 0 after your if/else's.
+
+3. Excellent solution. Clear and concise. But again, formatting! Should have a space
+after each comma, a space between "Bool" and the opening function brace {. And quit it
+with the semicolons (a hard habit to break, I know).
+
+4. Recursion, nice. Check out the formatting comparison:
+	Before:					After:
+	func gcd(_ a:Int, _ b:Int)->Int {	func gcd(_ a: Int, _ b: Int) -> Int {
+    		if (b==0) {				if b == 0 {	
+        	   return a;				   return a
+    		}					}
+    		return gcd(b,a%b);			return gcd(b, a%b)
+	}					}
+
+5. A few straggling semicolons, but generally much better formatting here. Good solution 
+with the character filtering. Nice!
+
+6. Recursion, again, good stuff! Extra newlines along with the missing spaces and 
+rogue semicolons.
+
+	divBy11(_ num:Int)->Bool{
+	divBy11(_ num: Int) -> Bool {
+
+	if (counter%2==0){
+	if (counter%2 == 0) {
+
+	Lines 17 and 34 are your extra newlines.
+
+7. Rogue set of parenthese in your return statement, but I love the lack of semicolons
+and the abundance of tasteful spaces.
+
+	func isPalindrome(_ input: String) -> Bool {
+
+Perfect formatting!
+
+8. Very minor formatting again, but like 7, not worthy of points lost. Please pay
+attention to it though.
